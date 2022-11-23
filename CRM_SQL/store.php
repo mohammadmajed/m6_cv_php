@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] != "POST" || empty($_POST)&& isset($_POST["std_de
     if ($conn->connect_error){
         $error="Connections Failed: ".$conn->connect_error;
     }else{
-        $sql = "INSERT INTO 'details' (First_Name,Last_Name,DOB_Name,email,living_place,summary,gender,phone,)
+        $sql = "INSERT INTO 'std_details' (First_Name,Last_Name,DOB_Name,email,living_place,summary,gender,phone,)
         VALUES('$First_Name','$Last_Name','$DOB_Name','$email','$living_place','$summary','$gender','$phone')";        if ($conn->query($sql)===true){
             $message="New Student register";
         }else{
